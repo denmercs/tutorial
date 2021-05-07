@@ -13,4 +13,7 @@
             <a href="<?php the_permalink(); ?>" class="btn btn-success">Read More</a>
         </div>
     </div>
-<?php endwhile; else: endif; ?>
+<?php endwhile; else: ?>
+    <p>There are no results for <?php echo get_search_query(); ?></p>
+
+<?php endif; ?>

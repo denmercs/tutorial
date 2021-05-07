@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 <section class="page-wrap">
     <div class="container">
-        <h1><?php single_cat_title(); ?></h1>
-        <?php get_template_part('includes/section', 'archive') ?>
+        <h1>Search Results: <?php echo get_search_query(); ?></h1>
+        <h3><?php single_cat_title(); ?></h3>
+        <?php get_template_part('includes/section', 'archive'); ?>
+        <?php get_template_part('includes/section', 'searchresults'); ?>
 
         <!-- first way to do pagination -->
         <?php // previous_posts_link(); ?>

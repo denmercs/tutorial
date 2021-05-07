@@ -11,11 +11,23 @@
     
     <?php 
         $tags = get_the_tags(); 
-        foreach($tags as $tag): ?>
-            <a href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a>
 
+        if($tags) {
+            foreach($tags as $tag): ?>
+                <a href="<?php echo get_tag_link($tag->term_id); ?>">
+                    <?php echo $tag->name; ?>
+                </a>
+            <?php endforeach;
+        }
 
-        <?php endforeach;?>
-    ?>
+        $categories = get_the_category();
+
+        foreach($categories as $cat): ?>
+            <a href="<?php echo get_category_link($cat->term_id); ?>">
+                <?php echo $cat->name; ?>
+            </a>
+        <?php endforeach; 
+
+        // comments_template( ); ?>
     
 <?php endwhile; else: endif; ?>

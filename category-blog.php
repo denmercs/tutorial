@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <section class="page-wrap">
     <div class="container">
-        this is the category blog template
+        <h1><?php single_cat_title(); ?></h1>
         <?php get_template_part('includes/section', 'archive') ?>
 
         <!-- first way to do pagination -->
